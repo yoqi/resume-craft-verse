@@ -7,27 +7,27 @@ import { GraduationCap, Calendar, Medal, Map } from 'lucide-react';
 const Education: React.FC = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      location: "Stanford, CA",
+      degree: "硕士学位",
+      school: "斯坦福大学",
+      location: "斯坦福, CA",
       period: "2018 - 2020",
       gpa: "3.9/4.0",
       highlights: [
-        "Specialization in Artificial Intelligence",
-        "Research Assistant in Natural Language Processing Lab",
-        "Published paper on deep learning approaches to sentiment analysis"
+          "人工智能专业",
+        "自然语言处理实验室研究助理",
+        "发表深度学习情感分析论文"
       ]
     },
     {
-      degree: "Bachelor of Science in Computer Engineering",
-      school: "Massachusetts Institute of Technology",
-      location: "Cambridge, MA",
+      degree: "计算机工程学士学位",
+      school: "麻省理工学院",
+      location: "剑桥, MA",
       period: "2014 - 2018",
       gpa: "3.85/4.0",
       highlights: [
-        "Graduated with High Honors",
-        "Teaching Assistant for Data Structures and Algorithms",
-        "Senior project: Developed a real-time collaborative code editor"
+        "毕业时获得最高荣誉",
+        "数据结构和算法助教",
+        "高级项目: 开发了一个实时协作的代码编辑器"
       ]
     }
   ];
@@ -35,50 +35,12 @@ const Education: React.FC = () => {
   return (
     <section id="education" className="section bg-vscode-active/30">
       <SectionTitle 
-        title="Education" 
-        subtitle="My academic background and qualifications"
+        title="教育经历" 
+        subtitle="我的学术背景和资格"
       />
       
       <div className="grid md:grid-cols-2 gap-10">
-        <div>
-          <CodeBlock filename="education" language="typescript">
-            <Line lineNumber={1} className="text-vscode-keywords">const</Line>
-            <Line lineNumber={2} className="text-vscode-variables"> education = {'{'}</Line>
-            <Line lineNumber={3} indent={1} className="text-vscode-strings">institutions: [</Line>
-            
-            {education.map((edu, eduIndex) => (
-              <React.Fragment key={eduIndex}>
-                <Line lineNumber={4 + eduIndex * 6} indent={2}>{'{'}</Line>
-                <Line lineNumber={5 + eduIndex * 6} indent={3} className="text-vscode-strings">
-                  name: <span className="text-vscode-strings">"{edu.school}"</span>,
-                </Line>
-                <Line lineNumber={6 + eduIndex * 6} indent={3} className="text-vscode-strings">
-                  degree: <span className="text-vscode-strings">"{edu.degree}"</span>,
-                </Line>
-                <Line lineNumber={7 + eduIndex * 6} indent={3} className="text-vscode-strings">
-                  year: <span className="text-vscode-strings">"{edu.period}"</span>,
-                </Line>
-                <Line lineNumber={8 + eduIndex * 6} indent={3} className="text-vscode-numbers">
-                  gpa: <span className="text-vscode-strings">"{edu.gpa}"</span>
-                </Line>
-                <Line lineNumber={9 + eduIndex * 6} indent={2}>
-                  {'}'}{eduIndex < education.length - 1 ? ',' : ''}
-                </Line>
-              </React.Fragment>
-            ))}
-            
-            <Line lineNumber={4 + education.length * 6} indent={1}>],</Line>
-            <Line lineNumber={5 + education.length * 6} indent={1} className="text-vscode-functions">
-              display()<span className="text-vscode-operators"> {'{'}
-            </span>
-            </Line>
-            <Line lineNumber={6 + education.length * 6} indent={2} className="text-vscode-keywords">
-              return <span className="text-vscode-operators">this.</span><span className="text-vscode-variables">institutions.</span><span className="text-vscode-functions">map</span><span className="text-vscode-operators">(</span><span className="text-vscode-parameters">i</span><span className="text-vscode-operators"> => </span><span className="text-vscode-variables">i</span><span className="text-vscode-operators">.</span><span className="text-vscode-variables">name</span><span className="text-vscode-operators">);</span>
-            </Line>
-            <Line lineNumber={7 + education.length * 6} indent={1}>{'}'}</Line>
-            <Line lineNumber={8 + education.length * 6}>{'};'}</Line>
-          </CodeBlock>
-        </div>
+      
         
         <div className="space-y-8">
           {education.map((edu, index) => (

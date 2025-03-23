@@ -45,13 +45,13 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
               <p className="text-vscode-text text-center md:text-left">
-                &copy; {new Date().getFullYear()} | Software Engineer Portfolio
+                &copy; {new Date().getFullYear()} | 天问科技
               </p>
             </div>
             
             <div className="flex items-center space-x-6">
               <a
-                href="https://github.com"
+                href="https://github.com/jianboy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-vscode-text hover:text-white transition-colors duration-300"
@@ -59,7 +59,7 @@ const Index = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/liuyuqi-gov/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-vscode-text hover:text-white transition-colors duration-300"
@@ -67,7 +67,7 @@ const Index = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:liuyuqi.gov@msn.cn"
                 className="text-vscode-text hover:text-white transition-colors duration-300"
               >
                 <Mail className="h-5 w-5" />

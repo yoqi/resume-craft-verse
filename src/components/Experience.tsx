@@ -7,40 +7,40 @@ import { Briefcase, Calendar, Building, ArrowRight } from 'lucide-react';
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: "Senior Software Engineer",
-      company: "Tech Innovations Inc.",
-      location: "San Francisco, CA",
+      title: "Senior 软件工程师",
+      company: "微软科技.Inc",
+      location: "上海徐汇区",
       period: "2021 - Present",
       responsibilities: [
-        "Leading a team of 5 engineers to develop and maintain microservices architecture",
-        "Architected and implemented a scalable API gateway that reduced latency by 40%",
-        "Spearheaded migration from monolith to microservices, improving deployment frequency by 300%",
-        "Mentored junior developers and conducted technical interviews"
+        "带领5名工程师开发和维护微服务架构",
+        "设计并实现了一个可扩展的API网关，将延迟降低了40%",
+        "推动从单体架构迁移到微服务架构，将部署频率提高了300%",
+        "指导初级开发人员并进行技术面试"
       ],
       technologies: ["Node.js", "React", "TypeScript", "AWS", "Docker", "Kubernetes"]
     },
     {
-      title: "Software Engineer",
-      company: "DataViz Solutions",
-      location: "Boston, MA",
+      title: "高级软件工程师",
+      company: "数据可视化解决方案",
+      location: "上海徐汇区",
       period: "2018 - 2021",
       responsibilities: [
-        "Developed and maintained RESTful APIs for data visualization platform",
-        "Implemented real-time data processing pipeline that handled 1M+ events per minute",
-        "Collaborated with design team to create intuitive user interfaces",
-        "Reduced application load time by 60% through performance optimizations"
+        "开发和维护数据可视化平台RESTful APIs",
+        "实现了一个实时数据处理管道，每分钟处理1M+事件",
+        "与设计团队合作创建直观的用户界面",
+        "通过性能优化将应用程序加载时间减少了60%"
       ],
       technologies: ["Python", "Django", "React", "PostgreSQL", "Redis", "AWS"]
     },
     {
-      title: "Software Development Intern",
-      company: "Global Systems Corp",
-      location: "Seattle, WA",
-      period: "Summer 2017",
+      title: "软件开发实习生",
+      company: "全球系统公司",
+      location: "西雅图, WA",
+      period: "2017年夏天",
       responsibilities: [
-        "Assisted in developing frontend components for company's customer portal",
-        "Fixed bugs and implemented new features in the user authentication system",
-        "Participated in code reviews and agile development processes"
+        "协助开发公司客户门户的前端组件",
+        "修复用户认证系统中的错误并实现新功能",
+        "参与代码审查和敏捷开发流程"
       ],
       technologies: ["JavaScript", "Angular", "Java", "Spring Boot", "MySQL"]
     }
@@ -49,8 +49,8 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="section">
       <SectionTitle 
-        title="Experience" 
-        subtitle="My professional journey and accomplishments"
+        title="工作经历" 
+        subtitle="我的职业历程和成就"
       />
       
       <div className="grid md:grid-cols-5 gap-10">

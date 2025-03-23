@@ -7,77 +7,76 @@ import { GitBranch, ExternalLink, Folder, Github, Star } from 'lucide-react';
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
-  const categories = ['All', 'Web', 'Mobile', 'API', 'ML/AI'];
+  const categories = ['所有', 'Web', 'App', '小程序', 'ML/AI'];
   
   const projects = [
     {
-      name: "EcoTracker",
-      description: "A full-stack application that helps users track and reduce their carbon footprint through personalized recommendations and analytics.",
-      category: "Web",
-      technologies: ["React", "Node.js", "MongoDB", "Chart.js", "AWS"],
+      name: "遇见app",
+      description: "遇见app是一款专注于帮助用户发现和探索新事物的社交应用。",
+      category: "App",
+      technologies: ["Android", "Kotlin", "Jetpack Compose", "Retrofit", "Room"],
       githubLink: "https://github.com/username/eco-tracker",
       demoLink: "https://eco-tracker.example.com",
       stars: 124,
       highlights: [
-        "Implemented responsive dashboard with real-time data visualization",
-        "Integrated carbon emission calculation algorithms",
-        "Built RESTful API with comprehensive documentation"
+        "实现了响应式仪表盘，通过实时数据可视化帮助用户了解自己的碳足迹",
+        "集成了碳排放计算算法",
+        "构建了全面的RESTful API文档"
       ]
     },
     {
-      name: "SmartShop",
-      description: "A mobile application that uses computer vision to help users find products in-store and compare prices across retailers.",
-      category: "Mobile",
-      technologies: ["React Native", "TensorFlow", "Firebase", "Google Cloud Vision"],
+      name: "霸王餐uniapp",
+      description: "霸王餐uniapp是一款专注于帮助用户发现和探索新事物的社交应用。",
+      category: "小程序",
+      technologies: ["uniapp", "uniCloud", "uniCloud", "uniCloud"],
       githubLink: "https://github.com/username/smart-shop",
       demoLink: "https://smartshop.example.com",
       stars: 89,
       highlights: [
-        "Developed custom image recognition model with 95% accuracy",
-        "Implemented barcode scanning and price comparison features",
-        "Created offline mode with data synchronization"
+        "开发了自定义图像识别模型，准确率高达95%",
+        "实现了条形码扫描和价格比较功能",
+        "创建了离线模式，支持数据同步"
       ]
     },
     {
-      name: "APIHub",
-      description: "A centralized API management platform that simplifies API discovery, testing, and integration for developers.",
-      category: "API",
-      technologies: ["Express.js", "PostgreSQL", "Redis", "Docker", "Swagger"],
+      name: "天天助理",
+      description: "天天助理是一款专注于帮助用户发现和探索新事物的社交应用。",
+      category: "小程序",
+      technologies: ["uniapp", "uniCloud", "uniCloud", "uniCloud"],
       githubLink: "https://github.com/username/api-hub",
       demoLink: "https://apihub.example.com",
       stars: 211,
       highlights: [
-        "Built authentication and authorization system with OAuth2",
-        "Designed scalable architecture handling 1000+ requests per second",
-        "Implemented real-time monitoring and alerting system"
+        "构建了认证和授权系统，使用OAuth2",
+        "设计了可扩展的架构，处理每秒1000+请求",
+        "实现了实时监控和告警系统"
       ]
     },
     {
-      name: "SentimentAnalyzer",
-      description: "A machine learning model that analyzes sentiment in customer reviews with high accuracy for multiple languages.",
-      category: "ML/AI",
+      name: "订餐系统",
+      description: "订餐系统是一款专注于帮助用户发现和探索新事物的社交应用。",
+      category: "Web",
       technologies: ["Python", "TensorFlow", "NLTK", "FastAPI", "Docker"],
       githubLink: "https://github.com/username/sentiment-analyzer",
       demoLink: "https://sentiment.example.com",
       stars: 167,
       highlights: [
-        "Trained model on 10+ million reviews across 5 languages",
-        "Achieved 92% accuracy in sentiment classification",
-        "Created API endpoints with comprehensive documentation"
+        "训练了1000+万条评论，准确率高达92%",
+        "创建了API端点，并提供了全面的文档"
       ]
     },
     {
-      name: "DevPortal",
-      description: "A developer portal that provides documentation, tutorials, and interactive examples for a complex API ecosystem.",
+      name: "考勤系统",
+      description: "考勤系统是一款专注于帮助用户发现和探索新事物的社交应用。",
       category: "Web",
       technologies: ["Vue.js", "GraphQL", "Markdown", "Algolia", "Netlify"],
       githubLink: "https://github.com/username/dev-portal",
       demoLink: "https://devportal.example.com",
       stars: 75,
       highlights: [
-        "Implemented advanced search functionality with Algolia",
-        "Created interactive API playground with live code execution",
-        "Designed responsive layout with theme customization"
+        "实现了高级搜索功能，使用Algolia",
+        "创建了交互式API游乐场，支持实时代码执行",
+        "设计了响应式布局，支持主题定制"
       ]
     }
   ];
@@ -89,8 +88,8 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="section bg-vscode-active/30">
       <SectionTitle 
-        title="Projects" 
-        subtitle="Showcasing my technical skills and problem-solving abilities"
+        title="项目经历" 
+        subtitle="展示我的技术技能和解决问题的能力"
       />
       
       <div className="flex justify-center mb-10">
@@ -181,17 +180,7 @@ const Projects: React.FC = () => {
         ))}
       </div>
       
-      <div className="text-center mt-12">
-        <a 
-          href="https://github.com/username" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center button-glow bg-vscode-active"
-        >
-          <GitBranch className="h-5 w-5 mr-2" />
-          <span>View More on GitHub</span>
-        </a>
-      </div>
+  
     </section>
   );
 };

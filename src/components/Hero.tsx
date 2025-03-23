@@ -4,7 +4,7 @@ import { ArrowDown, Terminal } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = "Hello World! I'm a Software Engineer.";
+  const fullText = "天问科技，共享未来";
   
   useEffect(() => {
     let currentIndex = 0;
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-vscode-variables mb-10 opacity-90">
-            Building elegant solutions to complex problems
+            坐标上海徐汇区，专注于AI、大数据、云计算、物联网等领域的技术研究和应用开发。
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,13 +51,13 @@ const Hero: React.FC = () => {
               href="#about" 
               className="button-glow bg-vscode-blue"
             >
-              View My Resume
+              联系我们
             </a>
             <a 
               href="#projects" 
               className="button-glow bg-vscode-active"
             >
-              Explore Projects
+              案例展示
             </a>
           </div>
         </div>

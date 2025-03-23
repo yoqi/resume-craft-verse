@@ -25,11 +25,11 @@ const Header: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: '关于我们', href: '#about' },
+    { name: '教育经历', href: '#education' },
+    { name: '工作经历', href: '#experience' },
+    { name: '项目经历', href: '#projects' },
+    { name: '联系方式', href: '#contact' },
   ];
 
   return (
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Code className="text-vscode-blue h-8 w-8 mr-2" />
-            <span className="text-xl font-bold text-white">DevResume</span>
+            <span className="text-xl font-bold text-white">天问科技</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -52,30 +52,7 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <div className="ml-4 flex items-center space-x-3">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-vscode-text hover:text-white transition-colors duration-300"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-vscode-text hover:text-white transition-colors duration-300"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:your-email@example.com"
-                className="text-vscode-text hover:text-white transition-colors duration-300"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
-            </div>
+           
           </nav>
 
           {/* Mobile menu button */}
