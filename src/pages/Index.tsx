@@ -1,12 +1,91 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Education from '@/components/Education';
+import Experience from '@/components/Experience';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import { Github, Linkedin, Mail, ChevronUp } from 'lucide-react';
 
 const Index = () => {
+  const [showScrollTop, setShowScrollTop] = React.useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 500);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="bg-vscode-bg text-white">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Education />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      
+      <footer className="bg-vscode-active py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+              <p className="text-vscode-text text-center md:text-left">
+                &copy; {new Date().getFullYear()} | Software Engineer Portfolio
+              </p>
+            </div>
+            
+            <div className="flex items-center space-x-6">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-vscode-text hover:text-white transition-colors duration-300"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-vscode-text hover:text-white transition-colors duration-300"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="mailto:your-email@example.com"
+                className="text-vscode-text hover:text-white transition-colors duration-300"
+              >
+                <Mail className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 p-3 rounded-full bg-vscode-blue shadow-glow text-white opacity-80 hover:opacity-100 transition-opacity duration-300 z-50"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="h-5 w-5" />
+        </button>
+      )}
     </div>
   );
 };
